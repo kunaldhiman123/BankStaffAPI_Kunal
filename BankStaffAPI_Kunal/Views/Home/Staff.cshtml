@@ -1,0 +1,222 @@
+﻿
+@{
+    ViewBag.Title = "Staff API";
+}
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Staff</h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                            Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="Name" required="required" class="form-control col-md-7 col-xs-12" name="Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Email">
+                            Email <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="Email" required="required" class="form-control col-md-7 col-xs-12" name="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Mobile">
+                            Mobile <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="Mobile" required="required" class="form-control col-md-7 col-xs-12" name="Mobile">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">
+                            Address <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="Address" required="required" class="form-control col-md-7 col-xs-12" name="Address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="EmpCode">
+                            Employee Code <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="EmpCode" required="required" class="form-control col-md-7 col-xs-12" name="EmpCode">
+                        </div>
+                    </div>
+
+                    <div class="ln_solid"></div>
+                    <input type="hidden" id="ID" name="ID" />
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                            <button type="submit" class="btn btn-success" id="btn1">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Bank Staff List</h2>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="table-responsive">
+                <table class="table table-striped jambo_table bulk_action" id="tab1">
+                    <tr class="headings">
+                        <th class="column-title" width="180px"># </th>
+                        <th class="column-title" width="380px">Name </th>
+                        <th class="column-title" width="380px">Email </th>
+                        <th class="column-title" width="380px">Mobile </th>
+                        <th class="column-title" width="380px">Address </th>
+                        <th class="column-title" width="380px">EmpCode </th>
+
+
+                        <th class="column-title no-link last" width="240px">
+                            <span class="nobr">Action</span>
+                        </th>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    function AddEditRecord(id, name, email, mobile, address, empCode) {
+        $("#Name").val(name);
+        $("#Email").val(email);
+        $("#Mobile").val(mobile);
+        $("#Address").val(address);
+        $("#EmpCode").val(empCode);
+        $("#ID").val(id);
+    }
+
+
+
+    function UpdateRecord() {
+        //debugger;
+        $.ajax({
+            type: "Put",
+            url: "/api/StaffsAPI/" + $("#ID").val(),
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify({
+                Name : $("#Name").val(),
+                Email : $("#Email").val(),
+                Mobile : $("#Mobile").val(),
+                Address : $("#Address").val(),
+                EmpCode : $("#EmpCode").val()
+            }),
+
+            dataType: "JSON",
+
+            success: function (data) {
+                $("#tab1").find("tr:gt(0)").remove();
+                $.getJSON("/api/StaffsAPI/", function (data) {
+                    $("#tab1").css("display", "block");
+                    $.each(data, function (key, val) {
+                        $("<tr class='even pointer'><td width='180px'>" + val.id + "</td><td width='180px'>" + val.name + "</td><td width='180px'>" + val.email + "</td><td width='180px'>" + val.mobile + "</td><td width='180px'>" + val.address + "</td><td width='180px'>" + val.empCode + "</td><td width='240px'>" + "<button class='btn btn-warning btn-xs' onclick='AddEditRecord(" + val.id + ',"' + val.name + '","' + val.email + '","' + val.mobile + '","' + val.address + '","' + val.empCode + '"' + ");'" + ">Edit</button> <button class='btn btn-danger btn-xs' onclick='DeleteRecord(" + val.id + ");'" + ">Delete</button>" + "</td></tr>").appendTo($("#tab1"));
+                    })
+                })
+                window.location.href("/Home/StaffAPI");
+            }
+        });
+    }
+    //Delete
+    function DeleteRecord(ID) {
+        $.ajax({
+
+            type: "DELETE",
+
+            contentType: "application/json;charset=utf-8",
+
+            url: "/api/StaffsAPI/" + ID,
+
+            data: JSON.stringify({
+                id: ID,
+            }),
+            dataType: "JSON",
+            success: function (data) {
+                $("#tab1").find("tr:gt(0)").remove();
+                $.getJSON("/api/StaffsAPI/", function (data) {
+                    $("#tab1").css("display", "block");
+                    $.each(data, function (key, val) {
+                        $("<tr class='even pointer'><td width='180px'>" + val.id + "</td><td width='180px'>" + val.name + "</td><td width='180px'>" + val.email + "</td><td width='180px'>" + val.mobile + "</td><td width='180px'>" + val.address + "</td><td width='180px'>" + val.empCode + "</td><td width='240px'>" + "<button class='btn btn-warning btn-xs' onclick='AddEditRecord(" + val.id + ',"' + val.name + '","' + val.email + '","' + val.mobile + '","' + val.address + '","' + val.empCode + '"' + ");'" + ">Edit</button> <button class='btn btn-danger btn-xs' onclick='DeleteRecord(" + val.id + ");'" + ">Delete</button>" + "</td></tr>").appendTo($("#tab1"));
+
+
+                    })
+
+                })
+            }
+        });
+    }
+    $(document).ready(function () {
+        debugger;
+        $("#tab1").css("display", "none");
+        $.getJSON("/api/StaffsAPI/", function (data) {
+            $("#tab1").css("display", "block");
+            $.each(data, function (key, val) {
+                $("<tr class='even pointer'><td width='180px'>" + val.id + "</td><td width='180px'>" + val.name + "</td><td width='180px'>" + val.email + "</td><td width='180px'>" + val.mobile + "</td><td width='180px'>" + val.address + "</td><td width='180px'>" + val.empCode + "</td><td width='240px'>" + "<button class='btn btn-warning btn-xs' onclick='AddEditRecord(" + val.id + ',"' + val.name + '","' + val.email + '","' + val.mobile + '","' + val.address + '","' + val.empCode + '"' + ");'" + ">Edit</button> <button class='btn btn-danger btn-xs' onclick='DeleteRecord(" + val.id + ");'" + ">Delete</button>" + "</td></tr>").appendTo($("#tab1"));
+
+            });
+        })
+
+        //POST
+        $("#btn1").click(function () {
+            if ($("#ID").val() > 0) {
+                UpdateRecord();
+            }
+            else {
+                var Name = $("#Name").val();
+                var Email = $("#Email").val();
+                var Mobile = $("#Mobile").val();
+                var Address = $("#Address").val();
+                var EmpCode = $("#EmpCode").val();
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json;charset=utf-8",
+                    url: "/api/StaffsAPI/",
+                    data: JSON.stringify({
+                        Name, Email, Mobile, Address, EmpCode
+
+                    }),
+                    dataType: "JSON",
+                    success: function (data) {
+                        $("#ID").val('');
+                        $("#tab1").find("tr:gt(0)").remove();
+                        $.getJSON("/api/StaffsAPI/", function (data) {
+                            $("#tab1").css("display", "block");
+                            $.each(data, function (key, val) {
+                                $("<tr class='even pointer'><td width='180px'>" + val.id + "</td><td width='180px'>" + val.name + "</td><td width='180px'>" + val.email + "</td><td width='180px'>" + val.mobile + "</td><td width='180px'>" + val.address + "</td><td width='180px'>" + val.empCode + "</td><td width='240px'>" + "<button class='btn btn-warning btn-xs' onclick='AddEditRecord(" + val.id + ',"' + val.name + '","' + val.email + '","' + val.mobile + '","' + val.address + '","' + val.empCode + '"' + ");'" + ">Edit</button> <button class='btn btn-danger btn-xs' onclick='DeleteRecord(" + val.id + ");'" + ">Delete</button>" + "</td></tr>").appendTo($("#tab1"));
+
+                            })
+
+                        })
+                    }
+                });
+            }
+        })
+    });
+
+</script>
+
+
+
