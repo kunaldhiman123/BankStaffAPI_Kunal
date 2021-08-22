@@ -10,5 +10,6 @@ namespace BankStaffAPI_Kunal.Models
     {
         public int ID { get; set; }
         public string DesignationName { get; set; }
+        public List<Staff> Staffs { get; set; }
     }
 }

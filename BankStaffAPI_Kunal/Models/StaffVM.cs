@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BankStaffAPI_Kunal.Models
 {
-    public class Staff
+    public class StaffVM
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -14,6 +14,6 @@ namespace BankStaffAPI_Kunal.Models
         public string Address { get; set; }
         public string EmpCode { get; set; }
         public int DesignationID { get; set; }
-        public Designation Designation { get; set; }
+        public string DesignationName { get; set; }
     }
 }

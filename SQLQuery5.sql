@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [BankStaffAPI_Kunal]    Script Date: 02-Aug-2021 05:11:10 ******/
+/****** Object:  Database [BankStaffAPI_Kunal]    Script Date: 22-Aug-2021 23:30:04 ******/
 CREATE DATABASE [BankStaffAPI_Kunal]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -80,7 +80,7 @@ ALTER DATABASE [BankStaffAPI_Kunal] SET QUERY_STORE = OFF
 GO
 USE [BankStaffAPI_Kunal]
 GO
-/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -94,7 +94,7 @@ CREATE TABLE [dbo].[__EFMigrationsHistory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetRoleClaims]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetRoleClaims]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -110,7 +110,7 @@ CREATE TABLE [dbo].[AspNetRoleClaims](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetRoles]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetRoles]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -126,7 +126,7 @@ CREATE TABLE [dbo].[AspNetRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserClaims]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetUserClaims]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -142,7 +142,7 @@ CREATE TABLE [dbo].[AspNetUserClaims](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserLogins]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetUserLogins]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ CREATE TABLE [dbo].[AspNetUserLogins](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserRoles]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetUserRoles]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -174,7 +174,7 @@ CREATE TABLE [dbo].[AspNetUserRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUsers]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetUsers]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -201,7 +201,7 @@ CREATE TABLE [dbo].[AspNetUsers](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserTokens]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[AspNetUserTokens]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -219,7 +219,7 @@ CREATE TABLE [dbo].[AspNetUserTokens](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Designations]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[Designations]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -233,7 +233,7 @@ CREATE TABLE [dbo].[Designations](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Staffs]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Table [dbo].[Staffs]    Script Date: 22-Aug-2021 23:30:05 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -245,33 +245,40 @@ CREATE TABLE [dbo].[Staffs](
 	[Mobile] [nvarchar](max) NULL,
 	[Address] [nvarchar](max) NULL,
 	[EmpCode] [nvarchar](max) NULL,
+	[DesignationID] [int] NOT NULL,
  CONSTRAINT [PK_Staffs] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'00000000000000_CreateIdentitySchema', N'3.1.13')
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'00000000000000_CreateIdentitySchema', N'3.1.15')
 GO
-INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20210327062553_Init', N'3.1.13')
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20210327062553_Init', N'3.1.15')
 GO
-INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20210802015857_iniiit', N'3.1.13')
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20210802015857_iniiit', N'3.1.15')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20210822183127_Init2', N'3.1.15')
 GO
 SET IDENTITY_INSERT [dbo].[Designations] ON 
 GO
 INSERT [dbo].[Designations] ([ID], [DesignationName]) VALUES (1, N'Manager')
 GO
+INSERT [dbo].[Designations] ([ID], [DesignationName]) VALUES (2, N'Software Engineer')
+GO
 SET IDENTITY_INSERT [dbo].[Designations] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Staffs] ON 
 GO
-INSERT [dbo].[Staffs] ([ID], [Name], [Email], [Mobile], [Address], [EmpCode]) VALUES (1, N'Kunal sharma', N'kunal@gmail.com', N'9878675656', N'Qwerty', N'EMP_01')
+INSERT [dbo].[Staffs] ([ID], [Name], [Email], [Mobile], [Address], [EmpCode], [DesignationID]) VALUES (1, N'Nirmal Singh', N'singhnirmal128@gmail.com', N'9815276871', N'Qwerty', N'S001', 2)
+GO
+INSERT [dbo].[Staffs] ([ID], [Name], [Email], [Mobile], [Address], [EmpCode], [DesignationID]) VALUES (2, N'Kamal deep', N'kamal@gmail.com', N'8990789089', N'Asdcxz', N'EMP_01', 1)
 GO
 SET IDENTITY_INSERT [dbo].[Staffs] OFF
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetRoleClaims_RoleId]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [IX_AspNetRoleClaims_RoleId]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetRoleClaims_RoleId] ON [dbo].[AspNetRoleClaims]
 (
 	[RoleId] ASC
@@ -279,7 +286,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetRoleClaims_RoleId] ON [dbo].[AspNetRoleClaim
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [RoleNameIndex]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [RoleNameIndex]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [RoleNameIndex] ON [dbo].[AspNetRoles]
 (
 	[NormalizedName] ASC
@@ -289,7 +296,7 @@ WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNOR
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetUserClaims_UserId]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [IX_AspNetUserClaims_UserId]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetUserClaims_UserId] ON [dbo].[AspNetUserClaims]
 (
 	[UserId] ASC
@@ -297,7 +304,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetUserClaims_UserId] ON [dbo].[AspNetUserClaim
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetUserLogins_UserId]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [IX_AspNetUserLogins_UserId]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetUserLogins_UserId] ON [dbo].[AspNetUserLogins]
 (
 	[UserId] ASC
@@ -305,7 +312,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetUserLogins_UserId] ON [dbo].[AspNetUserLogin
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetUserRoles_RoleId]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [IX_AspNetUserRoles_RoleId]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetUserRoles_RoleId] ON [dbo].[AspNetUserRoles]
 (
 	[RoleId] ASC
@@ -313,7 +320,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetUserRoles_RoleId] ON [dbo].[AspNetUserRoles]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [EmailIndex]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [EmailIndex]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE NONCLUSTERED INDEX [EmailIndex] ON [dbo].[AspNetUsers]
 (
 	[NormalizedEmail] ASC
@@ -321,13 +328,21 @@ CREATE NONCLUSTERED INDEX [EmailIndex] ON [dbo].[AspNetUsers]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UserNameIndex]    Script Date: 02-Aug-2021 05:11:11 ******/
+/****** Object:  Index [UserNameIndex]    Script Date: 22-Aug-2021 23:30:05 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [UserNameIndex] ON [dbo].[AspNetUsers]
 (
 	[NormalizedUserName] ASC
 )
 WHERE ([NormalizedUserName] IS NOT NULL)
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Index [IX_Staffs_DesignationID]    Script Date: 22-Aug-2021 23:30:05 ******/
+CREATE NONCLUSTERED INDEX [IX_Staffs_DesignationID] ON [dbo].[Staffs]
+(
+	[DesignationID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Staffs] ADD  DEFAULT ((0)) FOR [DesignationID]
 GO
 ALTER TABLE [dbo].[AspNetRoleClaims]  WITH CHECK ADD  CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY([RoleId])
 REFERENCES [dbo].[AspNetRoles] ([Id])
@@ -364,6 +379,12 @@ REFERENCES [dbo].[AspNetUsers] ([Id])
 ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[AspNetUserTokens] CHECK CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId]
+GO
+ALTER TABLE [dbo].[Staffs]  WITH CHECK ADD  CONSTRAINT [FK_Staffs_Designations_DesignationID] FOREIGN KEY([DesignationID])
+REFERENCES [dbo].[Designations] ([ID])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[Staffs] CHECK CONSTRAINT [FK_Staffs_Designations_DesignationID]
 GO
 USE [master]
 GO

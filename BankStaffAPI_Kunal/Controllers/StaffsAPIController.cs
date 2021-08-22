@@ -23,9 +23,37 @@ namespace BankStaffAPI_Kunal.Controllers
 
         // GET: api/StaffsAPI
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Staff>>> GetStaffs()
+        public ActionResult<List<StaffVM>> GetStaffs()
         {
-            return await _context.Staffs.ToListAsync();
+            //var data= _context.Staffs.Include(x => x.Designation).ToListAsync();
+            List<StaffVM> svm = new List<StaffVM>();
+            var data = (from s in _context.Staffs
+                       join d in _context.Designations on s.DesignationID equals d.ID
+                       select new 
+                       {
+                           s.ID,
+                           s.Name,
+                           s.Email,
+                           s.Mobile,
+                           s.Address,
+                           s.EmpCode,
+                           s.DesignationID,
+                           s.Designation.DesignationName
+                       }).ToList();
+            foreach (var item in data)
+            {
+                StaffVM obj = new StaffVM();
+                obj.ID = item.ID;
+                obj.Name = item.Name;
+                obj.Email = item.Email;
+                obj.Mobile = item.Mobile;
+                obj.Address = item.Address;
+                obj.EmpCode = item.EmpCode;
+                obj.DesignationID = item.DesignationID;
+                obj.DesignationName = item.DesignationName;
+                svm.Add(obj);
+            }
+            return svm;
         }
 
         // GET: api/StaffsAPI/5
@@ -50,7 +78,7 @@ namespace BankStaffAPI_Kunal.Controllers
         {
             if (id != staff.ID)
             {
-                staff.ID=id;
+                return BadRequest();
             }
 
             _context.Entry(staff).State = EntityState.Modified;
